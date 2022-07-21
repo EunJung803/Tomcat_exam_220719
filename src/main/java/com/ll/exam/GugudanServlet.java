@@ -1,18 +1,14 @@
 package com.ll.exam;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-
 @WebServlet("/gugudan")
 public class GugudanServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         Rq rq = new Rq(req, resp);
 
         int dan = rq.getIntParam("dan", 0);
